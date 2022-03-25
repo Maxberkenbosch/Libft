@@ -63,8 +63,8 @@ $(NAME): $(OBJS)
 	@ar -cr $(NAME) $(OBJS)
 	@echo "Creating archive file"
 
-bonus: $(OBJS_bonus)
-	@ar -cr $(NAME) $(OBJS_bonus)
+bonus: $(OBJS_bonus) $(OBJS)
+	@ar -cr $(NAME) $(OBJS) $(OBJS_bonus)
 
 all: $(NAME)
 
